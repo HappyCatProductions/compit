@@ -1,0 +1,18 @@
+{
+  "name": "compit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@hashgraph/sdk": "^2.72.0",
+    "common-node": "HappyCatProductions/common-node",
+    "dotenv": "^17.2.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

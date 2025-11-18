@@ -1,0 +1,37 @@
+# -------------------------------
+# Node dependencies
+# -------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# -------------------------------
+# Build artifacts
+# -------------------------------
+dist/
+build/
+out/
+coverage/
+*.tsbuildinfo
+
+# -------------------------------
+# Environment / secrets
+# -------------------------------
+.env
+
+# -------------------------------
+# JetBrains Rider / IDE files
+# -------------------------------
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.iml
+
+# -------------------------------
+# OS-specific files
+# -------------------------------
+.DS_Store
+Thumbs.db
