@@ -1,4 +1,4 @@
-const utils = require("common/gUtils");
+const utils = require("common-node/gUtils");
 const ioUtils = require('./ioUtils');
 const {BUILD_VERSION} = require('./constants'); 
 const {

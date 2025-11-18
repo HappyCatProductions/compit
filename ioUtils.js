@@ -1,5 +1,5 @@
 const dotenv = require('dotenv');
-const utils = require('common/gUtils');
+const utils = require('common-node/gUtils');
 
 //[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 function initVariables(runInfo)
