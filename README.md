@@ -75,6 +75,8 @@ Replace SOURCE_PK with your private key for the Source Account. This is the rand
 
 Replace TARGET_ACCOUNTS with a comma separated list of Hedera Account IDs that you wish to trigger your rewards for. If you have one Target Account then simply remove the second entry and any trailing commas.
 
+Note: You must restart the program before any changes to your `.env` file will take effect.
+
 ---
 
 OPTIONAL: Replace the values within the `run.env` file in the project root if you wish to customize the hour and minute to trigger your rewards:
