@@ -116,7 +116,7 @@ Change ```PING_CYCLE``` to the frequency you would like to check for rewards tri
 
 ```text
 compit/
-├─ .env                     // Your secret file containing Source Account, Source PK and Target Account(s)        
+├─ .env.template            // Used to create your own '.env' file (see CONFIGURATION above)        
 ├─ constants.js         
 ├─ HCP_logo_banner.png   
 ├─ index.js                 // Program entry point
