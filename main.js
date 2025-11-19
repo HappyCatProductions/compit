@@ -169,10 +169,16 @@ async function compIt(){
         const txIdTransfer = txTransferResponse.transactionId.toString();
 
         // Output the results
-        utils.log("-------------------------------- Transfer HBAR ------------------------------ ");
-        utils.log(`Receipt status   : ${statusTransferTx.toString()}`);
-        utils.log(`Transaction ID   : ${txIdTransfer}`);
-        utils.log(`Hashscan URL     : https://hashscan.io/mainnet/transaction/${txIdTransfer}`);
+        if (runInfo.logLevel > 1) 
+            utils.log("-------------------------------- Transfer HBAR ------------------------------ ");
+
+        if (runInfo.logLevel > 0)
+            utils.log(`Receipt status   : ${statusTransferTx.toString()}`);
+
+        if (runInfo.logLevel > 1) {
+            utils.log(`Transaction ID   : ${txIdTransfer}`);
+            utils.log(`Hashscan URL     : https://hashscan.io/mainnet/transaction/${txIdTransfer}`);
+        }
     } catch (error) {
         utils.error(error.message);
     } finally {
@@ -185,7 +191,7 @@ function processSpinner() {
     const spinner = ['|', '/', '-', '\\'];
     const index = m_spinner_ctr % spinner.length;
     m_spinner_ctr++;
-    process.stdout.write(`\r   - -- --- -~~-<==>~-~==>>O] ${spinner[index]} `);
+    process.stdout.write(`\r  -  -- --- -~~-<==>~-~==>>O] ${spinner[index]} `);
     setTimeout(processSpinner, 500);
 }
 

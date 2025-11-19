@@ -7,7 +7,9 @@ function initVariables(runInfo)
 	utils.debug("ioUtils.js initVariables");
 
     // Setup our process.run variable to store app state vars and set default values
+    runInfo.pingCycle = 5000;
     runInfo.runStatus = 1;
+    runInfo.logLevel = 2;
     runInfo.compItHour = 0;
     runInfo.compItMinute = 0;
     runInfo.weHaveCompedIt = false;
@@ -35,7 +37,11 @@ function initRunVariables(runInfo)
     // Run status: 0 = Exit, 1 = Run
     const parsedRunStatus = parseInt(process.env.RUN_STATUS);
     runInfo.runStatus = Number.isInteger(parsedRunStatus) ? parsedRunStatus : 1;
-    
+
+    // Log level: 0 = None, 1 = Status only, 2 = Verbose
+    const parsedLogLevel = parseInt(process.env.LOG_LEVEL);
+    runInfo.logLevel = Number.isInteger(parsedLogLevel) ? parsedLogLevel : 2;
+
     // CompIt Hour and Minute
     const parsedCompItHour = parseInt(process.env.COMPIT_HOUR);
     runInfo.compItHour = Number.isInteger(parsedCompItHour) ? parsedCompItHour : 0;

@@ -19,6 +19,7 @@ This is a node/js CLI tool that will allow you to collect daily staking rewards,
 - Use one Source Account to trigger one or more Target Accounts.
 - Choose which Hour and Mintue of the day you wish to trigger your Staking Rewards (default is Midnight).
 - Outputs each transaction Status, Transaction ID and an https://hashscan.io URL of the transaction.
+- Choose output levels of Verbose, Status only or None (default is Verbose).
 - Each transaction sends the minimal amount possible: 1 tinybar (1 HBAR = 100,000,000 tinybars). This means that if you are staking your Source Account then those rewards will keep this service running indefinitely (even if the reward percentage is extrmemly low).  
 - Graceful exists (if you're OCD like me).
 
@@ -87,6 +88,12 @@ OPTIONAL: Replace the values within the `run.env` file in the project root if yo
 # 0 = Shut down / Exit
 RUN_STATUS=1
 
+# LOG LEVEL
+# 2 = Verbose
+# 1 = Status only
+# 0 = None
+LOG_LEVEL=2
+
 # CompIt Timings
 COMPIT_HOUR=0
 COMPIT_MINUTE=0
@@ -98,6 +105,8 @@ PING_CYCLE=5000
 The file run.env is *not* secret and is meant for you to freely change during runtime.
 
 Change ```RUN_STATUS=1``` to ```RUN_STATUS=0``` to gracefully exit out of the program.
+
+Set ```LOG_LEVEL=2``` for Verbose output, ```LOG_LEVEL=1``` for Status only and ```LOG_LEVEL=0``` for no output at all.
 
 Change ```COMPIT_HOUR``` and ```COMPIT_MINUTE``` to the hour and minute you would like to trigger your rewards. Examples: 1:08am local time would be ```COMPIT_HOUR=1``` and ```COMPIT_MINUTE=8```.  4:23pm would be ```COMPIT_HOUR=16``` and ```COMPIT_MINUTE=23```. Default is midnight local time. 
 
