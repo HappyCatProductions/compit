@@ -10,7 +10,7 @@
                      
 by Happy Cat Productions
 ```             
-Compit: Invoke your Hedera Staking Rewards daily for Compound Interest! 
+CompIt: Invoke your Hedera Staking Rewards for daily compounding! 
 
 This is a node/js CLI tool that will allow you to collect daily staking rewards, for one or more Hedera Accounts, based upon an Hour and Minute of your choosing.
 
